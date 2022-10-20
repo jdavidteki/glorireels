@@ -1,2 +1,3 @@
-# glorireels
-be glori reel
+# Description
+
+like linktree but more fun

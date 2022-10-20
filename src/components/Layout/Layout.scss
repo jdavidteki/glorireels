@@ -1,0 +1,42 @@
+@import '../../assets/sass/Common.scss';
+
+
+.Layout
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-content
+    {
+        flex-grow: 1;
+        height: calc(100vh - 150px);
+    }
+
+    &-footer{
+        display: flex;
+    }
+
+    &-content.purchasereel,
+    &-content.glorireels{
+        height: auto;
+    }
+
+    &-content.orders{
+        min-height: 1600px;
+
+        @include bplte(xs)
+        {
+            min-height: 1200px;
+        }
+    }
+
+    &-content.admin{
+        min-height: 1600px;
+
+        @include bplte(xs)
+        {
+            min-height: 1500px;
+        }
+    }
+}
