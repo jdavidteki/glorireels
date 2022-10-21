@@ -29,6 +29,15 @@ class ConnectedOrders extends Component {
   }
 
   componentDidMount() {
+    //hack: use this to fix github pages doing ?/ on pages
+    if (window.location.href.includes("?/")){
+      let actualDestination = window.location.href.split("?/")[1]
+
+      this.props.history.push({
+        pathname: "/" + actualDestination
+      });
+    }
+
     if (this.props != undefined) {
       if (this.props?.match?.params?.id != undefined) {
         Firebase.getReelOrderById(this.props.match.params.id).then((val) => {

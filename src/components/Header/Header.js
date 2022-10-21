@@ -34,6 +34,15 @@ class Header extends Component{
   }
 
   componentDidMount(){
+    //hack: use this to fix github pages doing ?/ on pages
+    if (window.location.href.includes("?/")){
+      let actualDestination = window.location.href.split("?/")[1]
+
+      this.props.history.push({
+        pathname: "/" + actualDestination
+      });
+    }
+
     let path = window.location.pathname;
     this.setState({
       findMeIconHover: path.includes("glorireels/") || path.includes("rimicard") ? "#f5ab3c" : 'black',

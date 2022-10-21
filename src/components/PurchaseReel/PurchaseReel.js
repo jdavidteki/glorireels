@@ -66,7 +66,14 @@ class ConnectedPurchaseReel extends Component {
   }
 
   componentDidMount() {
-		//
+		//    //hack: use this to fix github pages doing ?/ on pages
+    if (window.location.href.includes("?/")){
+      let actualDestination = window.location.href.split("?/")[1]
+
+      this.props.history.push({
+        pathname: "/" + actualDestination
+      });
+    }
   }
 
 
