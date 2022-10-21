@@ -7,8 +7,8 @@ import AudioPlayer from 'react-h5-audio-player';
 import cashappLogo from '../../assets/icons/cashappIcon.png';
 import { GetSelectedStatusLevelLabel, GetSelectedLevelOptionAmount } from "../../Helpers/Helpers.js";
 import FancyVideo from "react-videojs-fancybox";
+import ReactAudioPlayer from 'react-audio-player';
 
-import 'react-h5-audio-player/lib/styles.css';
 import "./Orders.css";
 
 class ConnectedOrders extends Component {
@@ -60,6 +60,11 @@ class ConnectedOrders extends Component {
         });
       }
     }
+  }
+
+  copyOrderIDAndGoToCashapp = () => {
+    navigator.clipboard.writeText(this.state.id)
+    location.href = `https://cash.app/$glorireels/${GetSelectedLevelOptionAmount(this.state.selectedLevelOption)}`
   }
 
   render() {
@@ -152,19 +157,19 @@ class ConnectedOrders extends Component {
                 </div>
               </div>
             )}
-            {this.state.orderAudioURL && (
+            {this.state.orderAudioURL != "" && (
               <div className="Orders-infoCard">
                 <div className="Orders-infoCard-title">Voice Note</div>
                 <div className="Orders-infoDetails">
-                  <AudioPlayer
-                    className={"Orders-audio"}
-                    controlsList="nodownload"
+                  <ReactAudioPlayer
                     src={this.state.orderAudioURL}
+                    controls
+                    autoPlay={false}
                   />
                 </div>
               </div>
             )}
-            <div className="Orders-infoCard Orders-cashApp" onClick={() => location.href = `https://cash.app/$glorireels/${GetSelectedLevelOptionAmount(this.state.selectedLevelOption)}`}>
+            <div className="Orders-infoCard Orders-cashApp" onClick={() => this.copyOrderIDAndGoToCashapp()}>
               <div className="Orders-infoCard-title">Make Payment</div>
               <div className="Orders-infoDetails">
                 <img className="Orders-cashApp-Logo" src={cashappLogo} alt="cashapp.logo"/>

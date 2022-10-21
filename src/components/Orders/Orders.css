@@ -159,6 +159,11 @@
   padding: 32px 16px;
   margin-top: 32px;
 }
+@media (max-width: 767px) {
+  .Orders-details {
+    align-items: flex-start;
+  }
+}
 .Orders-details-level {
   width: 80%;
   display: flex;

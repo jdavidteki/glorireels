@@ -35,6 +35,11 @@
     padding: 32px 16px;
     margin-top: 32px;
 
+    @include bplte(xs)
+    {
+      align-items: flex-start;
+    }
+
     &-level {
       width: 80%;
       display: flex;

@@ -250,7 +250,7 @@ class ConnectedPurchaseReel extends Component {
         <div className="PurchaseReel-voiceNote PurchaseReel-eachSection">
           <h3>
             Leave us a voicenote with all the answers from the questions below
-            so you don't have to answer the questions. Then hit pay and the
+            so you don't have to answer the questions. Then hit pay at the
             bottom of this page
           </h3>
 
