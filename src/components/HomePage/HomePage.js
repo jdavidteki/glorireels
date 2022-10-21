@@ -36,7 +36,9 @@ class ConnectedHomePage extends Component{
     }
 
     setTimeout(() => {
-      document.getElementById("homePageGreeting").classList.add('HomePage-animategreeting');
+      if(document.getElementById("homePageGreeting")){
+        document.getElementById("homePageGreeting").classList.add('HomePage-animategreeting');
+      }
     }, 500)
 
 

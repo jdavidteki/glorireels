@@ -176,16 +176,6 @@ class ConnectedAdmin extends Component {
         }
     }
 
-    updateAnnotation(){
-        this.props.history.push({
-            pathname: "/annotationfixer/" + this.state.selectedOrdersIds[0],
-            state: {
-                lyrics: this.state.selectedOrderFirstName,
-                songId: this.state.selectedOrdersIds[0],
-            }
-        });
-    }
-
     onGridRowsUpdated = ({ fromRow, toRow, updated }) => {
         this.setState(state => {
           const filteredRows = state.filteredRows.slice();
@@ -255,22 +245,12 @@ class ConnectedAdmin extends Component {
                                     variant="outlined"
                                     color="primary"
                                     onClick={() => {
-                                        Firebase.updateSongInfo(this.state.selectedOrdersIds[0], this.state.updatingRow)
+                                        Firebase.updateOrderInfo(this.state.selectedOrdersIds[0], this.state.updatingRow)
                                     }}
                                 >
                                     Save Update - ({this.state.selectedOrdersIds[0]})
                                 </Button>
                                 {" "}
-                                <Button
-                                    style={{ marginTop: 20, width: 200 }}
-                                    variant="outlined"
-                                    color="primary"
-                                    onClick={() => {
-                                        this.updateAnnotation()
-                                    }}
-                                >
-                                    Update Annotation - ({this.state.selectedOrdersIds[0]})
-                                </Button>
                             </div>
                         )
                     }

@@ -35,6 +35,37 @@ class Firebase {
     })
   }
 
+  updateOrderInfo = (orderId, detailsToUpdate) =>{
+    return new Promise(resolve => {
+      firebase.database()
+      .ref('/orders/' + orderId + '/')
+      .update(
+        {
+          id: detailsToUpdate?.id?.length > 0 ? detailsToUpdate.id : '',
+          emailAddress: detailsToUpdate?.emailAddress?.length > 0 ? detailsToUpdate.emailAddress : '',
+          igname: detailsToUpdate?.igname?.length > 0 ? detailsToUpdate.igname : '',
+          firstName: detailsToUpdate?.firstName?.length > 0 ? detailsToUpdate.firstName : '',
+          lastName: detailsToUpdate?.lastName?.length > 0 ? detailsToUpdate.lastName : '',
+          reelPurpose: detailsToUpdate?.reelPurpose?.length > 0 ? detailsToUpdate.reelPurpose : '',
+          reelDuration: detailsToUpdate?.reelDuration?.length > 0 ? detailsToUpdate.reelDuration : '',
+          reelSampleLink: detailsToUpdate?.reelSampleLink?.length > 0 ? detailsToUpdate.reelSampleLink : '',
+          dueDateSelected: detailsToUpdate?.dueDateSelected?.length > 0 ? detailsToUpdate.dueDateSelected : '',
+          selectedLevelOption: detailsToUpdate?.selectedLevelOption?.length > 0 ? detailsToUpdate.selectedLevelOption : '',
+          orderAudioURL: detailsToUpdate?.orderAudioURL?.length > 0 ? detailsToUpdate.orderAudioURL : '',
+          statusValue: detailsToUpdate?.statusValue?.length > 0 ? detailsToUpdate.statusValue : '',
+          snippetVideoURL: detailsToUpdate?.snippetVideoURL?.length > 0 ? detailsToUpdate.snippetVideoURL : ''
+        },
+      )
+      .then((response) => {
+        console.log("response", response)
+        resolve(true)
+      })
+      .catch(error => {
+        console.log("error", error)
+      })
+    })
+  }
+
   getReelOrderById = (id) => {
     return new Promise(resolve => {
       firebase.database()
@@ -48,40 +79,6 @@ class Firebase {
         }
       })
     })
-  }
-
-  updateSenTitle = (update) =>{
-    return new Promise(resolve => {
-      firebase.database()
-      .ref(`/rimis/${update.id}/`)
-      .update(
-        {
-          senTitle: update.newSenTitle,
-        },
-      )
-      .then((response) => {
-        return new Promise(resolve => {
-          firebase.database()
-          .ref(`/rimis/${update.id}/updates/${update.updateId}`)
-          .remove()
-          .then(() => {
-            resolve(true)
-          }).catch( (error) =>{
-            console.log("error", error)
-          })
-        })
-        .then((response) => {
-          resolve(true)
-        })
-        .catch(error => {
-          console.log("error", error)
-        })
-      })
-      .catch(error => {
-        console.log("error", error)
-      })
-    })
-
   }
 
   sendForApproval = (item) => {
