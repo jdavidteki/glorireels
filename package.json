@@ -1,5 +1,5 @@
 {
-  "homepage": "https://jdavidteki.github.io",
+  "homepage": "https://jdavidteki.github.io/glorireels",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "concurrently \"expo start --web\" \"sass --watch .\"",
