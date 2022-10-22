@@ -86,7 +86,6 @@
     "redux": "^4.0.0",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.52.3",
     "string-similarity": "^4.0.4",
     "stripe": "^8.55.0",
     "styled-components": "^5.1.1",
@@ -111,8 +110,6 @@
     "babel-plugin-react-native-classname-to-style": "^1.2.2",
     "babel-preset-expo": "~8.1.0",
     "json-loader": "^0.5.7",
-    "node-sass": "^5.0.0",
-    "react-native-sass-transformer": "^1.4.0",
     "workbox-background-sync": "^6.1.5",
     "workbox-broadcast-update": "^6.1.5",
     "workbox-cacheable-response": "^6.1.5",
@@ -138,6 +135,11 @@
       "removeComments": false,
       "inlineCss": true
     }
+  },
+  "removeTheseModulesBeforeDeploy": {
+    "node-sass": "^5.0.0",
+    "react-native-sass-transformer": "^1.4.0",
+    "sass": "^1.52.3"
   },
   "private": true
 }
