@@ -99,6 +99,13 @@
     }
   }
 
+  &-ihponeMsg
+  {
+    display: block;
+    font-size: xx-small;
+    color: $gray-3;
+  }
+
   &-infoCard {
     border: $border-1;
     padding: 16px;

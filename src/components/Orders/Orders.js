@@ -166,6 +166,7 @@ class ConnectedOrders extends Component {
                     controls
                     autoPlay={false}
                   />
+                  <span className="Orders-ihponeMsg">**many apple products don't support this feature, sorry. use your laptop to hear your own voice, you narcissistic drone.</span>
                 </div>
               </div>
             )}

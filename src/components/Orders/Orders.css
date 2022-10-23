@@ -215,6 +215,11 @@
     max-height: 300px;
   }
 }
+.Orders-ihponeMsg {
+  display: block;
+  font-size: xx-small;
+  color: #555;
+}
 .Orders-infoCard {
   border: 1px solid #eee;
   padding: 16px;

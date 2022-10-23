@@ -123,7 +123,10 @@
     "workbox-strategies": "^6.1.5",
     "workbox-streams": "^6.1.5",
     "workbox-webpack-plugin": "^6.1.5",
-    "react-error-overlay": "6.0.9"
+    "react-error-overlay": "6.0.9",
+    "node-sass": "^5.0.0",
+    "react-native-sass-transformer": "^1.4.0",
+    "sass": "^1.52.3"
   },
   "overrides": {
     "react-error-overlay": "6.0.9"
