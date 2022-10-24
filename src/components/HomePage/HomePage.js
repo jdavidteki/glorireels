@@ -4,6 +4,7 @@ import Firebase from "../../firebase/firebase.js";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import Splash from "../Splash/Splash.js"
+import MetaTags from 'react-meta-tags';
 
 import "./HomePage.css";
 
@@ -112,6 +113,15 @@ class ConnectedHomePage extends Component{
   render(){
     return (
       <div className="HomePage">
+        <MetaTags>
+          <title>glorireels - be glori reel!</title>
+          <meta name="description" content="be glori reel" />
+          <meta property="og:title" content="glorireels" />
+          <meta httpEquiv="cache-control" content="no-cache" />
+          <meta httpEquiv="expires" content="0" />
+          <meta httpEquiv="pragma" content="no-cache" />
+        </MetaTags>
+
         <div className="HomePage-splash">
           <div className="HomePage-backgroundOverlay"></div>
           <Splash />

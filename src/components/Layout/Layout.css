@@ -142,29 +142,9 @@
 }
 .Layout-content {
   flex-grow: 1;
-  height: calc(100vh - 150px);
 }
 .Layout-footer {
   display: flex;
-}
-.Layout-content.purchasereel, .Layout-content.glorireels {
-  height: auto;
-}
-.Layout-content.orders {
-  min-height: 1600px;
-}
-@media (max-width: 767px) {
-  .Layout-content.orders {
-    min-height: 1200px;
-  }
-}
-.Layout-content.admin {
-  min-height: 1600px;
-}
-@media (max-width: 767px) {
-  .Layout-content.admin {
-    min-height: 1500px;
-  }
 }
 
 /*# sourceMappingURL=Layout.css.map */

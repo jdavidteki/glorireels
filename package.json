@@ -61,6 +61,7 @@
     "react": "^16.14.0",
     "react-activity": "^2.1.1",
     "react-animations": "^1.0.0",
+    "react-audio-player": "^0.17.0",
     "react-bootstrap": "^0.32.4",
     "react-data-grid": "^5.0.1",
     "react-data-grid-addons": "5.0.4-2",
@@ -110,6 +111,9 @@
     "babel-plugin-react-native-classname-to-style": "^1.2.2",
     "babel-preset-expo": "~8.1.0",
     "json-loader": "^0.5.7",
+    "react-error-overlay": "6.0.9",
+    "react-native-sass-transformer": "^1.4.0",
+    "sass": "^1.52.3",
     "workbox-background-sync": "^6.1.5",
     "workbox-broadcast-update": "^6.1.5",
     "workbox-cacheable-response": "^6.1.5",
@@ -122,11 +126,7 @@
     "workbox-routing": "^6.1.5",
     "workbox-strategies": "^6.1.5",
     "workbox-streams": "^6.1.5",
-    "workbox-webpack-plugin": "^6.1.5",
-    "react-error-overlay": "6.0.9",
-    "node-sass": "^5.0.0",
-    "react-native-sass-transformer": "^1.4.0",
-    "sass": "^1.52.3"
+    "workbox-webpack-plugin": "^6.1.5"
   },
   "overrides": {
     "react-error-overlay": "6.0.9"

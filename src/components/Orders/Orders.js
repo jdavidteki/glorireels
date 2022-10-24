@@ -3,7 +3,6 @@ import Firebase from "../../firebase/firebase.js";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import AudioPlayer from 'react-h5-audio-player';
 import cashappLogo from '../../assets/icons/cashappIcon.png';
 import { GetSelectedStatusLevelLabel, GetSelectedLevelOptionAmount } from "../../Helpers/Helpers.js";
 import FancyVideo from "react-videojs-fancybox";
@@ -166,7 +165,7 @@ class ConnectedOrders extends Component {
                     controls
                     autoPlay={false}
                   />
-                  <span className="Orders-ihponeMsg">**many apple products don't support this feature, sorry. use your laptop to hear your own voice, you narcissistic drone.</span>
+                  <span className="Orders-ihponeMsg">**many apple products don't support this feature, sorry. but don't worry, gloria will receive your note.</span>
                 </div>
               </div>
             )}

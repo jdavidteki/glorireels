@@ -160,7 +160,7 @@ class ConnectedPurchaseReel extends Component {
 				reelPurpose: this.state.reelPurpose,
 				reelDuration: this.state.reelDuration,
 				reelSampleLink: this.state.reelSampleLink,
-				dueDateSelected: this.state.dueDateSelected.toString().substring(16),
+				dueDateSelected: this.state.dueDateSelected.toString().substring(0, 16),
 				selectedLevelOption: this.state.selectedLevelOption,
 			}
 
@@ -312,7 +312,10 @@ class ConnectedPurchaseReel extends Component {
             displayValue="name" // Property name to display in the dropdown options
             placeholder="click here to select pricing"
 						selectionLimit="1"
+            closeOnSelect={true}
+            singleSelect={true}
           />
+
         </div>
 
         <div className="PurchaseReel-purposeOptions PurchaseReel-eachSection">
@@ -323,6 +326,8 @@ class ConnectedPurchaseReel extends Component {
             onSelect={(e) => this.setState({reelPurpose: e[0].name})} // Function will trigger on select event
             displayValue="name" // Property name to display in the dropdown options
             placeholder="click to select reel purpose"
+            closeOnSelect={true}
+            singleSelect={true}
           />
         </div>
 
@@ -332,6 +337,7 @@ class ConnectedPurchaseReel extends Component {
             selected={this.state.dueDateSelected}
             onSelect={(e) => this.setState({dueDateSelected: e})} //when day is clicked
             onChange={(e) => this.setState({dueDateSelected: e})} //only when value has changed
+            minDate={new Date()}
           />
         </div>
 
@@ -344,6 +350,8 @@ class ConnectedPurchaseReel extends Component {
             displayValue="name" // Property name to display in the dropdown options
             placeholder="Select Duration"
 						selectionLimit="1"
+            closeOnSelect={true}
+            singleSelect={true}
           />
         </div>
 
